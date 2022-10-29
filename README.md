@@ -317,3 +317,6 @@ www.strix       IN      CNAME   strix.operation.wise.ITA07.com.
 Dapat dilihat bahwa kami membuat sebuah domain general dan alias www untuk `strix.operation.wise.ITA07.com.` yang mengarah pada Eden.
 Lalu ditest sebagai berikut
 ![Soal7](Soal7.png)
+
+## Kendala
+Sering muncul error
