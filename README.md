@@ -220,7 +220,7 @@ zone \"wise.ITA07.com\" {
 ```
 
 Untuk testingnya nameserver diurut dari slave ke master, matikan untuk bind9 pada WISE dan nyalakan bind9 pada Berlint Lalu dicoba seperti berikut ini:
-![Soal5](Soal5.jpg)
+![Soal5](Soal5.png)
 
 ## Soal Nomor 6
 Karena banyak informasi dari Handler, maka dibuat subdomain yang khusus untuk operation yaitu `operation.wise.yyy.com` dengan alias `www.operation.wise.yyy.com` yang didelegasikan dari WISE ke Berlint dengan IP menuju ke Eden dalam folder operation. Tambahkan konfigurasi pada WISE sebagai berikut
