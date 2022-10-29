@@ -12,8 +12,7 @@
 ## Soal Nomor 1
 WISE akan dijadikan sebagai DNS Master, Berlint akan dijadikan DNS Slave, dan Eden akan digunakan sebagai Web Server. Terdapat 2 Client yaitu SSS, dan Garden. Semua node terhubung pada router Ostania, sehingga dapat mengakses internet. Maka konfigurasi terlebih dahulu sebagai berikut
 <br/>
-    - Ostania
-    
+    - Ostania    
     ```    
     auto eth0
     iface eth0 inet dhcp
@@ -35,8 +34,7 @@ WISE akan dijadikan sebagai DNS Master, Berlint akan dijadikan DNS Slave, dan Ed
     ```
     
 <br/>
-    - SSS
-    
+    - SSS    
     ```    
     auto eth0
     iface eth0 inet static
@@ -45,8 +43,7 @@ WISE akan dijadikan sebagai DNS Master, Berlint akan dijadikan DNS Slave, dan Ed
 	gateway 10.43.1.1
 	```
 <br/>
-    - Garden
-    
+    - Garden    
     ```    
     auto eth0
     iface eth0 inet static
@@ -55,8 +52,7 @@ WISE akan dijadikan sebagai DNS Master, Berlint akan dijadikan DNS Slave, dan Ed
     gateway 10.43.1.1
     ```
 <br/>
-    - WISE
-    
+    - WISE    
     ```    
     auto eth0
     iface eth0 inet static
@@ -65,8 +61,7 @@ WISE akan dijadikan sebagai DNS Master, Berlint akan dijadikan DNS Slave, dan Ed
     gateway 10.43.2.1
     ```
 <br/>
-    - Berlint
-    
+    - Berlint    
     ```    
     auto eth0
     iface eth0 inet static
@@ -75,8 +70,7 @@ WISE akan dijadikan sebagai DNS Master, Berlint akan dijadikan DNS Slave, dan Ed
     gateway 10.43.3.1
     ```
 <br/>
-    - Eden
-    
+    - Eden    
     ```
     auto eth0
     iface eth0 inet static
