@@ -12,6 +12,7 @@
 ## Soal Nomor 1
 WISE akan dijadikan sebagai DNS Master, Berlint akan dijadikan DNS Slave, dan Eden akan digunakan sebagai Web Server. Terdapat 2 Client yaitu SSS, dan Garden. Semua node terhubung pada router Ostania, sehingga dapat mengakses internet. Maka konfigurasi terlebih dahulu sebagai berikut
 <br/>
+
     - Ostania
 ```    
 auto eth0
@@ -92,6 +93,7 @@ Untuk mempermudah mendapatkan informasi mengenai misi dari Handler, maka dibuat 
 
 Untuk mengerjakan nomor 2, langkah-langkahnya adalah sebagai berikut
 <br/>
+
     - Install bind
 ```    
 apt-get update
