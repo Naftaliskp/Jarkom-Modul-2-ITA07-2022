@@ -12,7 +12,8 @@
 ## Soal Nomor 1
 WISE akan dijadikan sebagai DNS Master, Berlint akan dijadikan DNS Slave, dan Eden akan digunakan sebagai Web Server. Terdapat 2 Client yaitu SSS, dan Garden. Semua node terhubung pada router Ostania, sehingga dapat mengakses internet. Maka konfigurasi terlebih dahulu sebagai berikut
 <br/>
-    - Ostania 
+    - Ostania
+    
     ```
     
     auto eth0
@@ -34,6 +35,7 @@ WISE akan dijadikan sebagai DNS Master, Berlint akan dijadikan DNS Slave, dan Ed
     netmask 255.255.255.0```
 <br/>
     - SSS
+    
     ```
     
     auto eth0
@@ -43,6 +45,7 @@ WISE akan dijadikan sebagai DNS Master, Berlint akan dijadikan DNS Slave, dan Ed
 	gateway 10.43.1.1```
 <br/>
     - Garden
+    
     ```
     
     auto eth0
@@ -52,6 +55,7 @@ WISE akan dijadikan sebagai DNS Master, Berlint akan dijadikan DNS Slave, dan Ed
     gateway 10.43.1.1```
 <br/>
     - WISE
+    
     ```
     
     auto eth0
@@ -61,6 +65,7 @@ WISE akan dijadikan sebagai DNS Master, Berlint akan dijadikan DNS Slave, dan Ed
     gateway 10.43.2.1```
 <br/>
     - Berlint
+    
     ```
     
     auto eth0
@@ -70,6 +75,7 @@ WISE akan dijadikan sebagai DNS Master, Berlint akan dijadikan DNS Slave, dan Ed
     gateway 10.43.3.1```
 <br/>
     - Eden
+    
     ```
     
     auto eth0
@@ -80,7 +86,9 @@ WISE akan dijadikan sebagai DNS Master, Berlint akan dijadikan DNS Slave, dan Ed
 
 Lalu kami menjalankan perintah pada router utama Ostania sebagai berikut
     `iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE -s 10.43.0.0/16`
+    <br/>
 Pada setiap node selain router utama Ostania kami jalankan perintah berikut
     `echo "nameserver 192.168.122.1" > /etc/resolv.conf`
+    <br/>
 Lalu kita testing untuk Nodenya dan berhasil terkoneksi ke internet
     ![Soal 1](Soal1.png)
