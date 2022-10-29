@@ -11,9 +11,7 @@
 
 ## Soal Nomor 1
 WISE akan dijadikan sebagai DNS Master, Berlint akan dijadikan DNS Slave, dan Eden akan digunakan sebagai Web Server. Terdapat 2 Client yaitu SSS, dan Garden. Semua node terhubung pada router Ostania, sehingga dapat mengakses internet. Maka konfigurasi terlebih dahulu sebagai berikut
-<br/>
-
-    - Ostania
+* Ostania
 ```    
 auto eth0
 iface eth0 inet dhcp
@@ -34,7 +32,7 @@ address 10.43.3.1
 netmask 255.255.255.0
 ```
 
-    - SSS
+* SSS
 ```    
 auto eth0
 iface eth0 inet static
@@ -43,7 +41,7 @@ netmask 255.255.255.0
 gateway 10.43.1.1
 ```
 
-    - Garden
+* Garden
 ```    
 auto eth0
 iface eth0 inet static
@@ -52,7 +50,7 @@ netmask 255.255.255.0
 gateway 10.43.1.1
 ```
 
-    - WISE 
+* WISE 
 ```    
 auto eth0
 iface eth0 inet static
@@ -61,7 +59,7 @@ netmask 255.255.255.0
 gateway 10.43.2.1
 ```
 
-    - Berlint    
+* Berlint    
 ```    
 auto eth0
 iface eth0 inet static
@@ -70,7 +68,7 @@ netmask 255.255.255.0
 gateway 10.43.3.1
 ```
 
-    - Eden    
+* Eden    
 ```
 auto eth0
 iface eth0 inet static
@@ -93,14 +91,13 @@ Untuk mempermudah mendapatkan informasi mengenai misi dari Handler, maka dibuat 
 
 Untuk mengerjakan nomor 2, langkah-langkahnya adalah sebagai berikut
 <br/>
-
-    - Install bind
+* Install bind
 ```    
 apt-get update
 apt-get install bind9
 ```
 
-    - Buka konfigurasi file `/etc/bind/named.conf.local` tambahkan sebagai berikut
+* Buka konfigurasi file `/etc/bind/named.conf.local` tambahkan sebagai berikut
 ```    
 zone "wise.ita07.com" {
 type master;
