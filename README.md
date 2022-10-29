@@ -32,16 +32,15 @@ WISE akan dijadikan sebagai DNS Master, Berlint akan dijadikan DNS Slave, dan Ed
     address 10.43.3.1
     netmask 255.255.255.0
     ```
-    
 <br/>
     - SSS    
     ```    
     auto eth0
     iface eth0 inet static
-	address 10.43.1.2
-	netmask 255.255.255.0
-	gateway 10.43.1.1
-	```
+    address 10.43.1.2
+    netmask 255.255.255.0
+    gateway 10.43.1.1
+    ```
 <br/>
     - Garden    
     ```    
