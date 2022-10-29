@@ -86,3 +86,50 @@ Pada setiap node selain router utama Ostania kami jalankan perintah berikut
     <br/>
 Lalu kita testing untuk Nodenya dan berhasil terkoneksi ke internet
     ![Soal 1](Soal1.png)
+
+## Soal Nomor 2
+Untuk mempermudah mendapatkan informasi mengenai misi dari Handler, maka dibuat website utama dengan akses `wise.yyy.com` dengan alias `www.wise.yyy.com` pada folder WISE
+
+Untuk mengerjakan nomor 2, langkah-langkahnya adalah sebagai berikut
+<br/>
+    - Install bind
+```    
+apt-get update
+apt-get install bind9
+```
+
+    - Buka konfigurasi file `/etc/bind/named.conf.local` tambahkan sebagai berikut
+```    
+zone "wise.ita07.com" {
+type master;
+file "/etc/bind/wise/wise.ita07.com";
+};
+```
+
+Lalu buat folder wise dengan `mkdir wise` pada folder bind
+<br/> 
+Lalu buat file konfigurasinya pada folder `/etc/bind/wise/wise.ita07.com`
+```
+;
+; BIND data file for local loopback interface
+;
+$TTL    604800
+@       IN      SOA     wise.ITA07.com. root.wise.ITA07.com. (
+                              2         ; Serial
+                         604800         ; Refresh
+                          86400         ; Retry
+                        2419200         ; Expire
+                         604800 )       ; Negative Cache TTL
+;
+@               IN      NS      wise.ITA07.com.
+@               IN      A       10.43.2.2
+eden            IN      A       10.43.3.3
+www             IN      CNAME   wise.ITA07.com.
+www.eden        IN      CNAME   eden.wise.ITA07.com.
+```
+
+Setelah itu kita coba apakah berhasil membuka webservernya dari Node lain, di sini menggunakan node SSS. Tambahkan nameserver terlebih dahulu
+`echo "nameserver 10.43.2.2" > /etc/resolv.conf`
+<br/>
+Lalu Testing menggunakan komputer SSS
+    ![Soal 2](Soal2.png)
