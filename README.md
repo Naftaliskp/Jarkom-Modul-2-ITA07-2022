@@ -277,7 +277,7 @@ zone "2.43.10.in-addr.arpa" {
 };
 ```
 
-Lalu pada file operations.wise.ITA07.com dibuat sebagai berikut
+Lalu pada file `operations.wise.ITA07.com` dibuat sebagai berikut
 ```
 
 \$TTL    604800
@@ -297,7 +297,7 @@ Lalu ditest sebagai berikut
 ![Soal6](Soal6.png)
 
 ## Soal Nomor 7
-Untuk informasi yang lebih spesifik mengenai Operation Strix, maka dibuat subdomain melalui Berlint dengan akses strix.operation.wise.yyy.com dengan alias www.strix.operation.wise.yyy.com yang mengarah ke Eden. Kami menambahkan konfigurasi pada `/etc/bind/operation/operation.wise.ITA07.com` sehingga menjadi seperti berikut
+Untuk informasi yang lebih spesifik mengenai Operation Strix, maka dibuat subdomain melalui Berlint dengan akses `strix.operation.wise.yyy.com` dengan alias `www.strix.operation.wise.yyy.com` yang mengarah ke Eden. Kami menambahkan konfigurasi pada `/etc/bind/operation/operation.wise.ITA07.com` sehingga menjadi seperti berikut
 ```
 $TTL    604800
 @       IN      SOA     operation.wise.ITA07.com. root.operation.wise.ITA07.com$
